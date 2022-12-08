@@ -1,11 +1,12 @@
-import Form from './components/Form';
+import { Form } from './components/Form.js';
+import { useState } from 'react';
 
-function App() {
+export function App() {
+  const [user, setUser] = useState('');
+
   return (
     <div className='container'>
-      <Form />
+      {user && user ? 'USER LOGGED IN' : <Form setUser={setUser} />}
     </div>
   );
 }
-
-export default App;

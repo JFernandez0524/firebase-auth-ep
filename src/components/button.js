@@ -1,4 +1,4 @@
-export default function Button({ color, text, handleClick }) {
+export function Button({ color, text, handleClick }) {
   return (
     <button
       className={`btn btn-${color}`}
